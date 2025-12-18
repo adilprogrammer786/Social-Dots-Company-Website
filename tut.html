@@ -1,0 +1,200 @@
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0b1720;
+      overflow-x: hidden;
+    }
+
+    /* ULTRA-LUXURY GLASS + GLOW HEADER */
+    header1{
+      padding: 90px 10%;
+      background: radial-gradient(circle at top left, #0b32a5, #0b1720 60%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      position: relative;
+    }
+
+    /* Floating neon orbs */
+    .orb {
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      background: #ffa40044;
+      border-radius: 50%;
+      filter: blur(80px);
+      animation: float 8s infinite ease-in-out;
+      z-index: 1;
+    }
+    .orb:nth-child(1) { top: 10%; left: 5%; animation-duration: 9s; }
+    .orb:nth-child(2) { bottom: 10%; right: 10%; animation-duration: 7s; }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-40px); }
+      100% { transform: translateY(0); }
+    }
+
+    .hero-text {
+      z-index: 5;
+    }
+    .hero-text h1 {
+      font-size: 4rem;
+      font-weight: 900;
+      color: white;
+      line-height: 1.1;
+      text-shadow: 0 0 25px rgba(255,164,0,0.4);
+    }
+    .hero-text h1 span {
+      color: #ffa400;
+      text-shadow: 0 0 18px rgba(255,164,0,0.7);
+    }
+    .hero-text p {
+      color: #b8c6d9;
+      font-size: 1.3rem;
+      margin-top: -10px;
+      opacity: .9;
+    }
+
+    /* Luxury buttons */
+    .hero-buttons {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+    }
+    .hero-buttons a {
+      padding: 14px 32px;
+      border-radius: 40px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: .4s;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #ffa400, #ffcc66);
+      color: #0b1720;
+      box-shadow: 0 0 20px rgba(255,164,0,0.5);
+    }
+    .btn-primary:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 0 35px rgba(255,164,0,0.8);
+    }
+    .btn-outline {
+      border: 2px solid #ffa400;
+      color: #ffa400;
+      backdrop-filter: blur(10px);
+    }
+    .btn-outline:hover {
+      background: #ffa400;
+      color: #0b1720;
+      box-shadow: 0 0 25px rgba(255,164,0,0.8);
+    }
+
+    /* Image box with neon frame */
+    .hero-img {
+      width: 430px;
+      height: 530px;
+      border-radius: 40px;
+      background: linear-gradient(145deg, #0b2033, #0b32a5);
+      position: relative;
+      padding: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 40px rgba(255,164,0,0.3), inset 0 0 40px rgba(11,50,165,0.4);
+      z-index: 5;
+    }
+    .hero-img img {
+      width: 100%;
+      border-radius: 30px;
+    }
+
+    /* LOGO STRIP */
+    .logos {
+      background: #0b1720;
+      padding: 30px 10%;
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+      opacity: .85;
+    }
+    .logos img {
+      width: 85px;
+      opacity: .7;
+      transition: .3s;
+    }
+    .logos img:hover {
+      opacity: 1;
+    }
+
+    /* SERVICES SECTION - Ultra Glassmorphism */
+    .services {
+      padding: 100px 10%;
+      color: white;
+      position: relative;
+    }
+
+    .services-title {
+      text-align: center;
+      font-size: 3.3rem;
+      font-weight: 800;
+      margin-bottom: 50px;
+      color: #ffa400;
+      text-shadow: 0 0 20px rgba(255,164,0,0.6);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+    }
+
+    .service-box {
+      background: rgba(11,50,165,0.22);
+      padding: 25px;
+      border-radius: 35px;
+      border: 1px solid rgba(255,164,0,0.4);
+      backdrop-filter: blur(15px);
+      transition: .4s;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(255,164,0,0.2);
+    }
+    .service-box:hover {
+      transform: translateY(-8px) scale(1.04);
+      box-shadow: 0 0 35px rgba(255,164,0,0.5);
+      border-color: #ffa400;
+    }
+
+    .service-img {
+      height: 190px;
+      border-radius: 25px;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #0b1720, #0b32a5);
+      box-shadow: inset 0 0 25px rgba(255,164,0,0.15);
+    }
+
+    .service-box h3 {
+      font-size: 1.7rem;
+      color: #ffa400;
+      margin-bottom: 10px;
+    }
+    .service-box p {
+      color: #d0d8e5;
+      font-size: 1rem;
+      opacity: .9;
+    }
+  </style>
+</head>
+<body>
+
+  <header1>
+    <div class="hero-text">
+      <h1>Providing <br><span>Best WEB Services</span></h1>
+      <p>We provide stunning, animated and luxury design services.</p>
+
+      <div class="hero-buttons">
+        <a href="contact.html" class="btn-primary">Get Services</a>
+        <a href="contact.html" class="btn-outline">Details</a>
+      </div>
+    </div>

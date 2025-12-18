@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    * {
+     
+        align-items: center;
+
+    }
+
+    body {
+
+        background:linear-gradient(145deg, #ffa400,black, #0b32a5);
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+        height: 200px;
+        border-bottom: 7px solid black;
+    }
+
+    .header h1 {
+        font-size: 70px;
+        font-family: "Playfair Display", serif;
+        transition: all ease-in-out;
+        color: black;
+
+    }
+
+    .header h1:hover {
+        transform: scale(1.2);
+        transition: transform .6s ease-in-out;
+        color: #ffa400;
+        text-shadow: 0 5px 10px goldenrod ;
+    }
+</style>
+
+<body>
+      <!-- ---------------- HEADER ---------------- -->
+<header id="mainHeader">
+  <div class="logo" ><a href="index.html">
+    <img src="Pictures/logo.png" alt="Logo"></a>
+  </div>
+
+  <nav>
+    <ul class="nav-links">
+
+      <li class="dropdown">
+        <button class="drop-btn"><a href="about.html">About</a> ▾</button>
+        <ul class="submenu">
+          <li><a href="#">Company</a></li>
+          <li><a href="#">Leadership</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <button class="drop-btn"><a href="service.html">Services</a> ▾</button>
+        <ul class="submenu">
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">App Development</a></li>
+          <li><a href="#">UI/UX Design</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <button class="drop-btn">Solutions ▾</button>
+        <ul class="submenu">
+          <li><a href="#">AI Solutions</a></li>
+          <li><a href="#">Cloud Systems</a></li>
+          <li><a href="#">Automation</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <button class="drop-btn">Models ▾</button>
+        <ul class="submenu">
+          <li><a href="#">Dedicated Team</a></li>
+          <li><a href="#">Fixed Price</a></li>
+          <li><a href="#">Hourly Hiring</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <button class="drop-btn">Inside ▾</button>
+        <ul class="submenu">
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Case Studies</a></li>
+        </ul>
+      </li>
+
+    </ul>
+  </nav>
+
+  <div class="nav-btns">
+    <button class="btn">Hire Developers</button>
+    <button class="btn" id="contactBtn">Let's Talk</button>
+  </div>
+</header>
+    <div class="header">
+        <h1>CONTACT US</h1>
+    </div>
+
+    <div id="bb-calendar"></div>
+
+    <!-- Contact Form -->
+    <section id="contactFormSection">
+        <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <h2>Confirm Your Booking</h2>
+            <input type="hidden" name="bookingDate" placeholder="Booking Date">
+            <input type="hidden" name="bookingTime" placeholder="Booking Time">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="phone" placeholder="Phone" required>
+            <select name="service" placeholder="Service Required" required>
+                <option value="">Select a service</option>
+                <option>Software Development</option>
+                <option>Graphic Design</option>
+                <option>3D Animation</option>
+                <option>Marketing</option>
+                <option>BPO Services</option>
+            </select>
+            <button type="submit">Confirm Booking</button>
+        </form>
+    </section>
+    
+    <footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="Pictures/logo.png" alt="Social Dots">
+      <p>Social Dots is a technology partner helping early-stage start-ups, SMBs and enterprises with technology development outsourcing.</p>
+      <div class="social-icons">
+     <div class="social-icons">
+  <!-- LinkedIn -->
+  <a href="#" target="_blank" aria-label="LinkedIn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20" height="20" fill="currentColor">
+      <path d="M100.28 448H7.4V148.9h92.88zm-46.44-341C24.28 107 0 82.7 0 53.69 0 24.28 24.28 0 53.84 0s53.84 24.28 53.84 53.69c0 29-24.28 53.31-53.84 53.31zM447.8 448h-92.68V302.4c0-34.7-12.48-58.4-43.64-58.4-23.78 0-37.94 16-44.2 31.5-2.27 5.5-2.85 13.2-2.85 20.9V448h-92.68s1.23-243.8 0-269.1h92.68v38.1c-0.19 0.3-0.45 0.6-0.64 0.9h0.64v-0.9c12.3-19 34.3-46 83.5-46 60.9 0 106.7 39.7 106.7 125.1V448z"/>
+    </svg>
+  </a>
+
+  <!-- Facebook -->
+  <a href="#" target="_blank" aria-label="Facebook">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="20" height="20" fill="currentColor">
+      <path d="M279.14 288l14.22-92.66h-88.91V132.19c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S270.43 0 225.36 0c-73.55 0-121.36 44.38-121.36 124.72V195.3H22.89V288h81.11v224h100.2V288z"/>
+    </svg>
+  </a>
+
+  <!-- Instagram -->
+  <a href="#" target="_blank" aria-label="Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20" height="20" fill="currentColor">
+      <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9S160.5 370.8 224.1 370.8 339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.3 0-74.7-33.4-74.7-74.7s33.4-74.7 74.7-74.7 74.7 33.4 74.7 74.7-33.4 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 27-26.9 27s-26.9-12.1-26.9-27 12-27 26.9-27 26.9 12.1 26.9 27zm76.1 27.2c-1.7-35.9-9.9-67.7-36.1-93.9s-58-34.4-93.9-36.1C276.5 32 248 32 224 32s-52.5 0-72.6 1.5c-35.9 1.7-67.7 9.9-93.9 36.1S23.3 106.1 21.6 142c-1.5 20.1-1.5 48.6-1.5 72.6s0 52.5 1.5 72.6c1.7 35.9 9.9 67.7 36.1 93.9s58 34.4 93.9 36.1c20.1 1.5 48.6 1.5 72.6 1.5s52.5 0 72.6-1.5c35.9-1.7 67.7-9.9 93.9-36.1s34.4-58 36.1-93.9c1.5-20.1 1.5-48.6 1.5-72.6s0-52.5-1.5-72.6zM398.8 388c-7.8 19.6-23 35-42.6 42.8-29.5 11.7-99.5 9-132.2 9s-102.7 2.6-132.2-9c-19.6-7.8-34.8-23.2-42.6-42.8-11.7-29.5-9-99.5-9-132.2s-2.6-102.7 9-132.2c7.8-19.6 23-34.8 42.6-42.6 29.5-11.7 99.5-9 132.2-9s102.7-2.6 132.2 9c19.6 7.8 34.8 23 42.6 42.6 11.7 29.5 9 99.5 9 132.2s2.7 102.7-9 132.2z"/>
+    </svg>
+  </a>
+
+  <!-- X / Twitter -->
+  <a href="#" target="_blank" aria-label="X / Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="20" fill="currentColor">
+      <path d="M459.4 151.7c.32 4.5.32 9.1.32 13.6 0 138.7-105.6 298.8-298.8 298.8-59.5 0-114.8-17.3-161.3-47.1 8.4 1 16.8 1.3 25.6 1.3 49.2 0 94.6-16.8 130.5-45-46.1-1-84.8-31.2-98.1-72.7 6.4 1 12.8 1.6 19.5 1.6 9.5 0 18.7-1.3 27.5-3.7-48.2-9.7-84.2-52.2-84.2-103.3v-1.3c14.2 7.9 30.4 12.7 47.7 13.3-28.2-18.8-46.7-50.6-46.7-86.7 0-19 5.2-36.7 14.2-52 51.8 63.7 129.2 105.5 216.4 110-1.8-7.7-2.8-15.7-2.8-24 0-58.1 47.2-105.3 105.3-105.3 30.3 0 57.7 12.7 77 33.1 24-4.7 46.7-13.5 67-25.7-7.9 24.7-24.7 45.4-46.7 58.4 21.5-2.6 42.1-8.3 61.2-16.9-14.2 21.3-32.3 40-53.1 55.2z"/>
+    </svg>
+  </a>
+
+  <!-- YouTube -->
+  <a href="#" target="_blank" aria-label="YouTube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="20" height="20" fill="currentColor">
+      <path d="M549.655 124.083c-6.281-23.665-24.81-42.128-48.473-48.414C457.47 64 288 64 288 64s-169.47 0-213.182 11.669c-23.664 6.286-42.192 24.749-48.473 48.414C16 168 16 256 16 256s0 88 11.665 131.917c6.281 23.665 24.81 42.128 48.473 48.414C118.53 448 288 448 288 448s169.47 0 213.182-11.669c23.664-6.286 42.192-24.749 48.473-48.414C560 344 560 256 560 256s0-88-10.345-131.917zM232 336V176l142 80-142 80z"/>
+    </svg>
+  </a>
+</div>
+
+      </div>
+    </div>
+    <div class="footer-right">
+      <h3>OUR GLOBAL SERVICES</h3>
+      <div class="office-row">
+        <div class="office-box"><img src="Service Images/1.jpg" alt=""><h4>Web Development</h4><p>37 Alexander Avenue, Staten Island, NY 10312, USA</p></div>
+        <div class="office-box"><img src="Service Images/2.webp" alt=""><h4>AI Automation</h4><p>Dundas Street East, Toronto Ontario M5A 0N5, Canada</p></div>
+        <div class="office-box"><img src="Service Images/3.jpg" alt=""><h4>Enterprise Solutions</h4><p>Warlies Park House, Upshire, Waltham Abbey EN9 3SL, UK</p></div>
+        <div class="office-box"><img src="Service Images/4.jpeg" alt=""><h4>Social Media Marketing</h4><p>154-D Architect Engineers Society, Lahore, Pakistan</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">Copyright © 2025 Social Dots. All rights reserved. | <a href="#">Terms</a> | <a href="#">Privacy</a></div>
+</footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxury Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0b1720;
+    overflow-x: hidden;
+  }
+
+  /* NEW HERO SECTION (NO HEADER1 ANYMORE) */
+  .hero-section {
+    padding: 90px 10%;
+    background: radial-gradient(circle at top left, #0b32a5, #0b1720 60%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    position: relative;
+  }
+
+  /* Floating neon orbs */
+  .orb {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: #ffa40044;
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: float 8s infinite ease-in-out;
+    z-index: 1;
+  }
+  .orb:nth-child(1) { top: 10%; left: 5%; animation-duration: 9s; }
+  .orb:nth-child(2) { bottom: 10%; right: 10%; animation-duration: 7s; }
+
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-40px); }
+    100% { transform: translateY(0); }
+  }
+
+  .hero-text {
+    z-index: 5;
+  }
+  .hero-text h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    color: white;
+    line-height: 1.1;
+    text-shadow: 0 0 25px rgba(255,164,0,0.4);
+  }
+  .hero-text h1 span {
+    color: #ffa400;
+    text-shadow: 0 0 18px rgba(255,164,0,0.7);
+  }
+  .hero-text p {
+    color: #b8c6d9;
+    font-size: 1.3rem;
+    margin-top: -10px;
+    opacity: .9;
+  }
+
+  .hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+  }
+
+  .btn-primary {
+    padding: 14px 32px;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #ffa400, #000000);
+    color: #0b1720;
+    border: 4px solid black;
+    text-decoration: none;
+    transition: .4s;
+    box-shadow: 0 0 20px rgba(255,164,0,0.5);
+  }
+  .btn-primary:hover {
+    color: white;
+    background-color: black;
+    border-color: #ffa400;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.8);
+  }
+
+  .btn-outline {
+    padding: 14px 32px;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #ffa400, #000000);
+    color: #0b1720;
+    border: 4px solid black;
+    text-decoration: none;
+    transition: .4s;
+    box-shadow: 0 0 20px rgba(255,164,0,0.5);
+  }
+  .btn-outline:hover {
+    color: white;
+    background-color: black;
+    border-color: #ffa400;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.8);
+  }
+
+  .profile-card {
+      width: 420px;
+      height: 520px;
+      background: linear-gradient(145deg, #0b2033, #0b32a5);
+      border-radius: 40px;
+      position: relative;
+      padding: 10px;
+      box-shadow: 0 0 40px rgba(255, 164, 0, 0.3), inset 0 0 40px rgba(11, 50, 165, 0.4);
+
+      /* FIXED TRANSITION (4 seconds smooth) */
+      transition: all 4s ease-in-out;
+    }
+
+    .profile-card:hover {
+      background: #ffa400;
+      color: #0b1720;
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 0 35px rgba(255, 164, 0, 0.8);
+      border: 2px solid black;
+    }
+     .profile-card img {
+      width: 100%;
+      border-radius: 30px;
+    }
+  .logos {
+      background: #0b1720;
+      padding: 30px 10%;
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+      opacity: .85;
+    }
+    .logos img {
+      width: 85px;
+      opacity: .7;
+      transition: .3s;
+    }
+    .logos img:hover {
+      opacity: 1;
+    }
+
+    /* SERVICES SECTION - Ultra Glassmorphism */
+    .services {
+      padding: 100px 10%;
+      color: white;
+      position: relative;
+    }
+
+    .services-title {
+      text-align: center;
+      font-size: 3.3rem;
+      font-weight: 800;
+      margin-bottom: 50px;
+      color: #ffa400;
+      text-shadow: 0 0 20px rgba(255,164,0,0.6);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+    }
+
+    .service-box {
+      background: rgba(11,50,165,0.22);
+      padding: 25px;
+      border-radius: 35px;
+      border: 1px solid rgba(255,164,0,0.4);
+      backdrop-filter: blur(15px);
+      transition: .4s;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(255,164,0,0.2);
+    }
+    .service-box:hover {
+      transform: translateY(-8px) scale(1.04);
+      box-shadow: 0 0 35px rgba(255,164,0,0.5);
+      border-color: #ffa400;
+    }
+
+    .service-img {
+      height: 190px;
+      border-radius: 25px;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #0b1720, #0b32a5);
+      box-shadow: inset 0 0 25px rgba(255,164,0,0.15);
+    }
+
+    .service-box h3 {
+      font-size: 1.7rem;
+      color: #ffa400;
+      margin-bottom: 10px;
+    }
+    .service-box p {
+      color: #d0d8e5;
+      font-size: 1rem;
+      opacity: .9;
+    }
+</style>
+<header id="mainHeader">
+ <div class="logo" ><a href="index.html">
+    <img src="Pictures/logo.png" alt="Logo"></a>
+  </div>
+
+  <nav>
+    <ul class="nav-links">
+
+      <li class="dropdown">
+        <button class="drop-btn"><a href="about.html">About</a> ▾</button>
+        <ul class="submenu">
+          <li><a href="#">Company</a></li>
+          <li><a href="#">Leadership</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <button class="drop-btn"><a href="service.html">Services</a> ▾</button>
+        <ul class="submenu">
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">App Development</a></li>
+          <li><a href="#">UI/UX Design</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <button class="drop-btn">Solutions ▾</button>
+        <ul class="submenu">
+          <li><a href="#">AI Solutions</a></li>
+          <li><a href="#">Cloud Systems</a></li>
+          <li><a href="#">Automation</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <button class="drop-btn">Models ▾</button>
+        <ul class="submenu">
+          <li><a href="#">Dedicated Team</a></li>
+          <li><a href="#">Fixed Price</a></li>
+          <li><a href="#">Hourly Hiring</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <button class="drop-btn">Inside ▾</button>
+        <ul class="submenu">
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Case Studies</a></li>
+        </ul>
+      </li>
+
+    </ul>
+  </nav>
+
+  <div class="nav-btns">
+    <button class="btn">Hire Developers</button>
+    <button class="btn" id="contactBtn">Let's Talk</button>
+  </div>
+</header>
+
+
+<!-- REPLACED HEADER1 WITH NEW SECTION -->
+<section class="hero-section">
+
+  <span class="orb"></span>
+  <span class="orb"></span>
+
+  <div class="hero-text">
+    <h1>Providing <br><span>Best WEB Services</span></h1>
+    <p>We provide stunning, animated and luxury design services.</p>
+
+
+    <div class="hero-buttons">
+      <a href="contact.html" class="btn-primary">Get Services</a>
+      <a href="contact.html" class="btn-outline">Details</a>
+    </div>
+  </div>
+
+  <div class="profile-card">
+      <img src="22.png" alt="Ali Shafique" />
+    </div>
+
+</section>
+
+
+  <div class="logos">
+    <img src="https://via.placeholder.com/90x40" />
+    <img src="https://via.placeholder.com/90x40" />
+    <img src="https://via.placeholder.com/90x40" />
+    <img src="https://via.placeholder.com/90x40" />
+  </div>
+
+  <section class="services">
+    <h2 class="services-title">Best Services</h2>
+
+    <div class="services-grid">
+      <div class="service-box" onclick="goContact()">
+        <div class="service-img"><img src="Service Images/1.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:25px;" /></div>
+        <h3>Web Development</h3>
+        <p>Complete responsive websites with animations.</p>
+      </div>
+
+      <div class="service-box" onclick="goContact()">
+        <div class="service-img"><img src="Service Images/2.webp" style="width:100%; height:100%; object-fit:cover; border-radius:25px;" /></div>
+        <h3>Web Designing</h3>
+        <p>Ultra luxury user interfaces with advanced effects.</p>
+      </div>
+
+      <div class="service-box" onclick="goContact()">
+        <div class="service-img"><img src="Service Images/3.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:25px;" /></div>
+        <h3>Database Management</h3>
+        <p>Powerful, secure & optimized database systems.</p>
+      </div>
+
+      <div class="service-box" onclick="goContact()">
+        <div class="service-img"><img src="Service Images/4.jpeg" style="width:100%; height:100%; object-fit:cover; border-radius:25px;" /></div>
+        <h3>SEO</h3>
+        <p>Boost website ranking with professional SEO tools.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function goContact() {
+      window.location.href = "contact.html";
+    }
+  </script>
+
+</body>
+</html>
